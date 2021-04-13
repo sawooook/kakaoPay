@@ -3,6 +3,7 @@ package com.example.kakaoPay.controller;
 import com.example.kakaoPay.concern.dto.SignUpRequestDto;
 import com.example.kakaoPay.service.UserService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,7 @@ public class UserController {
     @PostMapping("/user")
     public ResponseEntity signUp(@RequestBody SignUpRequestDto signUpRequestDto) {
         userService.signUp(signUpRequestDto.getEmail(), signUpRequestDto.getPassword());
-
+        return ResponseEntity.ok().build();
     }
+
 }

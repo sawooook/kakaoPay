@@ -28,6 +28,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	implementation 'com.auth0:java-jwt:3.8.3'
+	implementation group: 'com.opencsv', name: 'opencsv', version: '4.4'
+
 }
 
 test {
