@@ -1,10 +1,13 @@
 package com.example.kakaoPay.domain;
 
+import lombok.Getter;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
 public class Institute {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,11 +16,14 @@ public class Institute {
     @Enumerated(EnumType.STRING)
     private InstituteState state;
 
-//    @OneToMany
+    @OneToMany(mappedBy = "institute")
     List<BillingPay> billingPayList = new ArrayList<>();
 
     public Institute(InstituteState state) {
         this.state = state;
+    }
+
+    public Institute() {
     }
 
     public static InstituteState getBankState(int listNum) {

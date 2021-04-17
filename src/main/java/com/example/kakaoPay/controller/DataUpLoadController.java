@@ -28,7 +28,6 @@ public class DataUpLoadController {
     // 파일 업로드 완료시
     @PostMapping
     public String saveCSV(@RequestParam("file") MultipartFile file) {
-//        OpenCSV.saveCSV(file);
         List<List<Integer>> dataList = OpenCSV.readCSV(file);
         billingPayService.addCSVData(dataList);
         return "/data/new.html";
