@@ -4,37 +4,8 @@
 - [빌드 및 실행하기](#빌드-및-실행하기)
 - [기능 요구사항](#기능-요구사항)
 - [개발 제약사항](#개발-제약사항)
-- [해결방법](#해결방법)
 
 ---
-
-## 개발 환경
-- 기본 환경
-    - IDE: IntelliJ IDEA Ultimate
-    - OS: Mac OS X
-    - GIT
-- Server
-    - Java8
-    - Spring Boot 2.2.2
-    - JPA
-    - H2
-    - Gradle
-    - Junit5
-
-
-## 빌드 및 실행하기
-### 터미널 환경
-- Git, Java 는 설치되어 있다고 가정한다.
-
-```
-$ git clone https://github.com/CODEMCD/kakaopay-task3.git
-$ cd kakaopay-task3
-$ ./gradlew clean build
-$ java -jar build/libs/kakaopay-task3-0.0.1-SNAPSHOT.jar
-```
-
-- 접속 Base URI: `http://localhost:8080`
-
 ## 기능 요구사항
 ### 필수사항
 - 데이터 파일(`.csv`)에서 각 레코드를 데이터베이스에 저장하는 API 개발
